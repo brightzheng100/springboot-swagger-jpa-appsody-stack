@@ -9,6 +9,7 @@ spec:
   stack: APPSODY_STACK
   service:
     type: ClusterIP
+    port: APPSODY_PORT
     annotations:
       prometheus.io/scrape: 'true'
       prometheus.io/path: '/actuator/prometheus'
