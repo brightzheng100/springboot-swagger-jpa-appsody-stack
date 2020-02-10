@@ -134,11 +134,11 @@ And Actuator endpoints:
 
 Please refer to [this sample application](https://github.com/brightzheng100/springboot-swagger-jpa-stack) for more details.
 
-**2. `appsody debug`**: To start debugging the application
+**2. `appsody debug`**: To start debugging the application. The debugger will listen at port 5005.
 
-**3. `appsody test`**: To run test cases for the application
+**3. `appsody test`**: To run test cases for the application.
 
-**4. `appsody build`**: To build the Docker image and generate a Kubernetes manifest file
+**4. `appsody build`**: To build the Docker image and generate a Kubernetes manifest file.
 
 ```sh
 $ appsody build -t registry:5000/my-project:latest --push
@@ -178,7 +178,9 @@ $ kubectl port-forward service/my-project 8080:8080
 ```
 
 Now open your browser and navigate to: http://localhost:8080/
-Yep, you should see the Swagger UI, with the sample APIs listed there.
+Yep, you should see the Swagger UI, with the sample APIs listed there:
+
+![swagger-ui](https://raw.githubusercontent.com/brightzheng100/springboot-swagger-jpa-stack/master/misc/screenshot-swagger.png "Swagger UI")
 
 So it works end to end. Enjoy!
 
