@@ -158,14 +158,27 @@ $ appsody deploy -t registry:5000/my-project:latest
 **6. `kubectl get`**: To check it out from Kubernetes.
 
 ```sh
-$ kubectl get appsodyapplication,pod
-NAME                                        IMAGE                             EXPOSED   RECONCILED   AGE
-appsodyapplication.appsody.dev/my-project   registry:5000/my-project:latest   true      True         6m45s
+$ kubectl get appsodyapplication,svc,pod
+NAME                                        IMAGE                            EXPOSED   RECONCILED   AGE
+appsodyapplication.appsody.dev/my-project   registry:5000/my-project:0.1.0   true      True         3m23s
+
+NAME                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/kubernetes   ClusterIP   10.96.0.1       <none>        443/TCP    88m
+service/my-project   ClusterIP   10.106.100.39   <none>        8080/TCP   3m23s
 
 NAME                                   READY   STATUS    RESTARTS   AGE
-pod/appsody-operator-595d74b67-l8qhk   1/1     Running   0          6m46s
-pod/my-project-d69489999-r7mtd         1/1     Running   0          6m26s
+pod/appsody-operator-595d74b67-l8qhk   1/1     Running   0          85m
+pod/my-project-85b768977d-4dgr2        1/1     Running   0          3m23s
 ```
+
+**7. Access Application**: By default, it's exposed by `ClusterIP` service type.
+
+```sh
+$ kubectl port-forward service/my-project 8080:8080
+```
+
+Now open your browser and navigate to: http://localhost:8080/
+Yep, you should see the Swagger UI, with the sample APIs listed there.
 
 So it works end to end. Enjoy!
 
