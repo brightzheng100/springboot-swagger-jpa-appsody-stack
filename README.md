@@ -27,7 +27,7 @@ Moreover, it provides a series of integrated capabilities and plugins to streaml
 
 Templates are used to initialize your application project to quickly start development.
 
-For now, there is only one template named "`default`", which is also the default template of the Stack.
+For now, there is only one template named `default`, which is also the default template of the Stack.
 
 Once initialized, by syntax of `appsody init [<REPO>/]<STACK> [<TEMPLATE>]` , the template will help you scaffold a runnable application with following file structure:
 
@@ -177,8 +177,9 @@ pod/my-project-85b768977d-4dgr2        1/1     Running   0          3m23s
 $ kubectl port-forward service/my-project 8080:8080
 ```
 
-Now open your browser and navigate to: http://localhost:8080/
-Yep, you should see the Swagger UI, with the sample APIs listed there:
+Now open your browser and navigate to http://localhost:8080/.
+
+Yep, you should be redirected to the Swagger UI, with the sample APIs listed there:
 
 ![swagger-ui](https://raw.githubusercontent.com/brightzheng100/springboot-swagger-jpa-stack/master/misc/screenshot-swagger.png "Swagger UI")
 
