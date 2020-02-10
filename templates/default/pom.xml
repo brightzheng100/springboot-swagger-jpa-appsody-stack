@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+    <!-- Parent POM from Stack -->
+    <parent>
+        <groupId>{{.stack.parentpomgroup}}</groupId>
+        <artifactId>{{.stack.parentpomid}}</artifactId>
+        <version>{{.stack.parentpomrange}}</version>
+        <relativePath/>
+    </parent>
+
+	<groupId>org.mine</groupId>
+	<artifactId>default-application</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<dependencies>
+		<!-- The dependencies from Stack's parent pom -->
+		<!--
+			org.springframework.boot:spring-boot-starter-web
+			org.springframework.boot:spring-boot-starter-data-jpa
+			org.springframework.boot:spring-boot-starter-log4j2
+			org.springframework.boot:spring-boot-starter-actuator
+
+			io.springfox:springfox-swagger2
+			io.springfox:springfox-swagger-ui
+
+			org.flywaydb:flyway-core
+			com.h2database:h2
+			mysql:mysql-connector-java
+
+			io.micrometer:micrometer-registry-prometheus
+			org.projectlombok:lombok
+
+			org.springframework.boot:spring-boot-starter-test
+			junit:junit
+			io.rest-assured:rest-assured
+		-->
+
+		<!-- application related dependencies start here-->
+		
+	</dependencies>
+
+</project>

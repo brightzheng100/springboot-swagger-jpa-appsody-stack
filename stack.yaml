@@ -1,0 +1,20 @@
+name: springboot-swagger-jpa
+version: 0.1.0
+description: A Stack managed by Maven, with Spring Boot, Swagger, JPA
+license: Apache-2.0
+language: java
+maintainers:
+  - name: Bright Zheng
+    email: bright.zheng@outlook.com
+    github-id: brightzheng100
+default-template: default
+requirements:
+   appsody-version: ">= 0.5.0"
+   docker-version: ">= 17.09.0"
+templating-data:
+  baseimage: maven:3.6.3-jdk-11-openj9
+  basebuildimage: adoptopenjdk:11-jdk-openj9
+  parentpomgroup: dev.appsody
+  parentpomid: springboot-swagger-jpa
+  parentpomrange: '[0.1, 0.2)'
+
