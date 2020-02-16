@@ -144,8 +144,27 @@ Please refer to [this sample application](https://github.com/brightzheng100/spri
 $ appsody build -t registry:5000/my-project:latest --push
 ```
 
-This will build a Docker image named `registry:5000/my-project:latest` and push it to Docker registry at `registry:5000`.
+This will build a Docker image tagged as `registry:5000/my-project:latest` and push it to Docker registry at `registry:5000`.
+
 Do change it accordingly for your env.
+
+Meanwhile, it will create the `app-deploy.yaml` file which is the Kubernetes manifest.
+
+If you want to activate `prod` Spring profile with a specified external MySQL URL, update the `app-deploy.yaml` with the `env` part:
+
+```sh
+apiVersion: appsody.dev/v1beta1
+kind: AppsodyApplication
+...
+spec:
+  ...
+  env:
+  - name: SPRING_PROFILES_ACTIVE
+    value: prod
+  - name: SPRING_DATASOURCE_URL
+    value: jdbc:mysql://192.168.1.148:3306/testdb   # point it to an empty `testdb` at `192.168.1.148`
+  ...
+```
 
 **5. `appsody deploy`**: To deploy it to Kubernetes.
 
