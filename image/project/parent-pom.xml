@@ -47,6 +47,10 @@
         <spring-boot.version>2.2.4.RELEASE</spring-boot.version>
         <springfox-swagger>2.9.2</springfox-swagger>
         <rest-assured>4.2.0</rest-assured>
+		<!-- Hazelcast -->
+		<hazelcast.version>4.0</hazelcast.version>
+		<hazelcast-hibernate53.version>2.0.0</hazelcast-hibernate53.version>
+		<hazelcast-client.version>3.12.6</hazelcast-client.version>
     </properties>
 
     <dependencyManagement>
@@ -119,6 +123,18 @@
 		<dependency>
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-registry-prometheus</artifactId>
+		</dependency>
+
+		<!-- Hazelcast -->
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast-spring</artifactId>
+			<version>${hazelcast.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast-hibernate53</artifactId>
+			<version>${hazelcast-hibernate53.version}</version>
 		</dependency>
 
 		<!-- Others -->
