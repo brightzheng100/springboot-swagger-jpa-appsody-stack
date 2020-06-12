@@ -18,7 +18,7 @@ Moreover, it provides a series of integrated capabilities and plugins to streaml
 - Integrated [Flyway](https://flywaydb.org/) to make database upgrades / patches as code;
 - Integrated [micrometer](http://micrometer.io/) to expose Prometheus-style metrics for app monitoring;
 - Integrated Spring Boot Test Framework with Junit 4, [Rest Assured](https://github.com/rest-assured/rest-assured) for testing;
-- Integrated with [Hazelcast](https://hazelcast.org/) and one can enable it by simply setting the Spring profile with "hazelcast";
+- Integrated with [Hazelcast](https://hazelcast.org/) which can be activated by adding a Spring profile named "hazelcast";
 - etc.
 
 > Note: Although Maven is provided by the Appsody stack container, allowing you to build, test, and debug your Java application without installing Maven locally, we still recommend installing Maven locally for the best development experience.
@@ -205,6 +205,7 @@ Yep, you should be redirected to the Swagger UI, with the sample APIs listed the
 ![swagger-ui](https://raw.githubusercontent.com/brightzheng100/springboot-swagger-jpa-stack/master/misc/screenshot-swagger.png "Swagger UI")
 
 So it works end to end. Enjoy!
+
 
 ## Advanced Topics
 
